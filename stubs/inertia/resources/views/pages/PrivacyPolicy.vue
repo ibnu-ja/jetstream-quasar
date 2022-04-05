@@ -1,33 +1,31 @@
-<template>
-  <Head title="Privacy Policy" />
 
-  <div class="font-sans text-gray-900 antialiased">
-    <div class="pt-4 bg-gray-100">
-      <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">
-        <div>
-          <jet-authentication-card-logo />
-        </div>
-
-        <div
-          class="w-full sm:max-w-2xl mt-6 p-6 bg-white shadow-md overflow-hidden sm:rounded-lg prose"
-          v-html="policy"
-        />
-      </div>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import { Head } from '@inertiajs/inertia-vue3'
-import JetAuthenticationCardLogo from '@/views/jetstream/AuthenticationCardLogo.vue'
+import JetAuthenticationCardLogo from '@/views/components/AuthenticationCardLogo.vue'
+import WebLayout from '@/views/layouts/WebLayout.vue'
+import { inject } from 'vue'
+import { useQuasar } from 'quasar'
 
-export default defineComponent({
+defineProps<{policy: string}>()
 
-  components: {
-    Head,
-    JetAuthenticationCardLogo
-  },
-  props: ['policy']
-})
+const route: any = inject('route')
+
+route().current('login')
+
+const $q = useQuasar()
+
 </script>
+
+<template>
+  <Head title="Login" />
+  <web-layout>
+    <q-page
+      class="fit column items-center content-center bg-grey-2 justify-start"
+      :padding="$q.screen.gt.sm"
+    >
+      <jet-authentication-card-logo />
+
+      <div v-html="policy" />
+    </q-page>
+  </web-layout>
+</template>
