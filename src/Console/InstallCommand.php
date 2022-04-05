@@ -239,6 +239,10 @@ class InstallCommand extends Command
         (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/inertia/resources/views/layouts', resource_path('views/layouts'));
         (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/inertia/resources/views/components', resource_path('views/components'));
 
+        (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/inertia/resources/composables', resource_path('composables'));
+        (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/inertia/resources/css', resource_path('css'));
+        (new Filesystem)->deleteDirectory(resource_path('js'));
+
         // (new Filesystem)->copyDirectory(base_path('vendor/laravel/jetstream/stubs/inertia/resources/js/Jetstream', resource_path('js/Jetstream'));
         // (new Filesystem)->copyDirectory(base_path('vendor/laravel/jetstream/stubs/inertia/resources/js/Layouts', resource_path('js/Layouts'));
         // (new Filesystem)->copyDirectory(base_path('vendor/laravel/jetstream/stubs/inertia/resources/js/Pages/API', resource_path('js/Pages/API'));
