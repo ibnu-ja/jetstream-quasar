@@ -1,0 +1,38 @@
+{
+    "name": "ibnu-ja/jetstream-quasar",
+    "description": "Laravel Jetstream Inertia.js + Vite + Vuetify",
+    "license": "MIT",
+    "keywords": [
+        "ibnu-ja",
+        "laravel",
+        "quasar",
+        "jetstream",
+        "vite"
+    ],
+    "autoload": {
+        "psr-4": {
+            "IbnuJa\\JetstreamQuasar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ibnu",
+            "email": "ibnu.magang@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "laravel/jetstream": "^2.6",
+        "illuminate/support": "^8.37|^9.0",
+        "illuminate/console": "^8.37|^9.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IbnuJa\\JetstreamQuasar\\JetstreamQuasarServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

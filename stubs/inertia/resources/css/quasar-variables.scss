@@ -1,0 +1,111 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+$primary: #1976d2;
+$secondary: #26a69a;
+$accent: #9c27b0;
+
+$dark: #1d1d1d;
+
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+$primary-dark: #97c5f3;
+$secondary-dark: #9ce7de;
+$accent-dark: #d795e2;
+
+$bg-primary-active: rgba($primary, 0.15);
+$bg-secondary-active: rgba($secondary, 0.15);
+$bg-accent-active: rgba($accent, 0.15);
+$bg-positive-active: rgba($positive, 0.15);
+$bg-negative-active: rgba($negative, 0.15);
+$bg-info-active: rgba($info, 0.15);
+$bg-info-active: rgba($warning, 0.15);
+
+// .bg-primary-active {
+//     background-color: tint($primary, 85);
+// }
+
+// .bg-secondary-active {
+//     background-color: tint($secondary, 85);
+// }
+
+// .bg-accent-active {
+//     background-color: tint($accent, 85);
+// }
+
+// .bg-positive-active {
+//     background-color: tint($positive, 85);
+// }
+// .bg-negative-active {
+//     background-color: tint($negative, 85);
+// }
+// .bg-info-active {
+//     background-color: tint($info, 85);
+// }
+// .bg-warning-active {
+//     background-color: tint($warning, 85);
+// }
+
+.text-primary-dark {
+    color: $primary-dark !important;
+}
+.bg-primary-dark {
+    background: $primary-dark !important;
+}
+.text-secondary-dark {
+    color: $secondary-dark !important;
+}
+.bg-secondary-dark {
+    background: $secondary-dark !important;
+}
+
+.text-accent-dark {
+    color: $accent-dark !important;
+}
+.bg-accent-dark {
+    background: $accent-dark !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.q-mx-6xl {
+    margin-left: 288px;
+    margin-right: 288px;
+}
+
+a.text-underline:link {
+    text-decoration: underline !important;
+}
+
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
